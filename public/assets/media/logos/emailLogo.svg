@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="135.33" height="22" viewBox="0 0 135.33 22">
+  <g id="emailLogo" transform="translate(-7.469 7.289)">
+    <text id="Vendor_Portal" data-name="Vendor Portal" transform="translate(31.798 9.711)" fill="#0d2451" font-size="18" font-family="Roboto-BlackItalic, Roboto" font-weight="800" font-style="italic"><tspan x="0" y="0">Vendor Portal</tspan></text>
+    <g id="custom-2" transform="translate(7.469 -5.9)">
+      <g id="Group_4136" data-name="Group 4136" transform="translate(0 0)">
+        <rect id="Rectangle_1491" data-name="Rectangle 1491" width="18.308" height="18.308" rx="9.154" transform="translate(0.421 0.63)" fill="#fff"/>
+        <path id="Path_4435" data-name="Path 4435" d="M12.68,21.36a9.68,9.68,0,1,1,9.68-9.68A9.68,9.68,0,0,1,12.68,21.36ZM7.84,11.2l3.872,1.452,1.452,3.874,3.388-8.714Z" transform="translate(-3 -2)" fill="#007bff"/>
+      </g>
+    </g>
+  </g>
+</svg>

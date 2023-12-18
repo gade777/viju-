@@ -1,0 +1,13 @@
+export const USER_ID = 'USER_ID';
+export const USER_FULLNAME = 'USER_FULLNAME';
+export const USER_LOGINID = 'USER_LOGINID';
+export const USER_MODULEACCESS = 'USER_MODULEACCESS';
+export const USER_ALLMODULES = 'USER_ALLMODULES';
+export const USER_ISADMIN = 'USER_ISADMIN';
+export const ECPTKEY = 'F54651SDDVHJDS';
+export const DESKTOPESSENTIALS = 'desktopessentials';
+export const COMPANYNAME = '';
+export const WEBAPPTITLE = 'Web App Title';
+export const WEBAPPSUBTITLE = 'Web App Subtitle';
+export const WEBAPPTAGLINE = 'Online Academy';
+export const USER_COURSES = 'USER_COURSES';

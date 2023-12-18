@@ -1,0 +1,34 @@
+{
+  "projects": {
+    "default": "vijuedtech-7db78"
+  },
+  "targets": {
+    "viju-dev-1425": {
+      "hosting": {
+        "employee": [
+          "viju-dev-1425"
+        ],
+        "student": [
+          "viju-dev-1425-student"
+        ],
+        "teacher": [
+          "viju-dev-1425-teachers"
+        ]
+      }
+    },
+    "viju-prod": {
+      "hosting": {
+        "employee": [
+          "viju-admin"
+        ],
+        "student": [
+          "viju-student"
+        ],
+        "teacher": [
+          "viju-teachers"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

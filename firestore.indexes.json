@@ -1,0 +1,159 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "CoursesDetails",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "course_keywords",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "course_status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "course_name",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "CoursesDetails",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "course_status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "course_name",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "EmployeeDetails",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "employee_modules",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "employee_status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "employee_name",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "EmployeeDetails",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "employee_modules",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "employee_status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "employee_name",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "SubjectsDetails",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "subject_accessuseruidarray",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "subject_course.uid",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "subject_name",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "SubjectsDetails",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "subject_course.uid",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "subject_name",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "SubjectsDetails",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "subject_course.uid",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "subject_status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "subject_name",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "TeachersDetails",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "teacher_modules",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "teacher_status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "teacher_name",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "TeachersDetails",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "teacher_modules",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "teacher_status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "teacher_name",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

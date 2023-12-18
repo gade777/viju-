@@ -1,0 +1,1195 @@
+[debug] [2023-12-11T11:23:34.983Z] ----------------------------------------------------------------------
+[debug] [2023-12-11T11:23:34.992Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-11T11:23:34.994Z] CLI Version:   12.9.1
+[debug] [2023-12-11T11:23:34.995Z] Platform:      win32
+[debug] [2023-12-11T11:23:34.995Z] Node Version:  v18.16.0
+[debug] [2023-12-11T11:23:34.997Z] Time:          Mon Dec 11 2023 16:53:34 GMT+0530 (India Standard Time)
+[debug] [2023-12-11T11:23:34.997Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-11T11:23:35.004Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-12-11T11:23:35.338Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-11T11:23:35.339Z] > authorizing via signed-in user (admin@apporbis.com)
+[debug] [2023-12-11T11:23:35.340Z] [iam] checking project vijuedtech for permissions ["firebase.projects.get"]
+[debug] [2023-12-11T11:23:35.342Z] > refreshing access token with scopes: []
+[debug] [2023-12-11T11:23:35.344Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-12-11T11:23:35.344Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-11T11:23:35.586Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-12-11T11:23:35.587Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-11T11:23:35.597Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions [none]
+[debug] [2023-12-11T11:23:35.598Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions x-goog-quota-user=projects/vijuedtech
+[debug] [2023-12-11T11:23:35.599Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:23:35.966Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-12-11T11:23:35.966Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-12-11T11:23:37.044Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions 200
+[debug] [2023-12-11T11:23:37.044Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:23:37.055Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-11T11:23:37.059Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:23:37.062Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:23:37.063Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig [none]
+[debug] [2023-12-11T11:23:37.515Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig 200
+[debug] [2023-12-11T11:23:37.515Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig {"projectId":"vijuedtech","storageBucket":"vijuedtech.appspot.com","locationId":"us-central"}
+[debug] [2023-12-11T11:23:37.533Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-11T11:23:37.545Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:23:39.929Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:23:39.930Z] Building nodejs source
+[debug] [2023-12-11T11:23:39.931Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:23:39.935Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:23:39.951Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8928
+
+[debug] [2023-12-11T11:23:41.658Z] Got response from /__/functions.yaml {"endpoints":{"getLiveDate":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"getLiveDate"},"addorUpdateEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateEmployee"},"addorUpdateteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateteacher"},"loginCheckEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckEmployee"},"loginCheckteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckteacher"},"addorUpdateBoard":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateBoard"},"addorUpdateCourse":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateCourse"},"addorUpdateSubject":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateSubject"},"addorUpdateLesson":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateLesson"},"addorUpdateQuestion":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateQuestion"},"addorUpdateAssessment":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateAssessment"},"submittedStudentAssessment":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/vijuedtech/databases/(default)/documents/StudentAssessments/{stdasmtuid}"},"retry":false},"labels":{},"entryPoint":"submittedStudentAssessment"},"createStudentAssessmentAttempt":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"createStudentAssessmentAttempt"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:23:41.707Z] [functions] Loaded functions definitions from source: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt.
+[debug] [2023-12-11T11:23:41.708Z] [functions[us-central1-getLiveDate]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/getLiveDate).
+[debug] [2023-12-11T11:23:41.709Z] [functions[us-central1-addorUpdateEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateEmployee).
+[debug] [2023-12-11T11:23:41.709Z] [functions[us-central1-addorUpdateteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateteacher).
+[debug] [2023-12-11T11:23:41.709Z] [functions[us-central1-loginCheckEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/loginCheckEmployee).
+[debug] [2023-12-11T11:23:41.710Z] [functions[us-central1-loginCheckteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/loginCheckteacher).
+[debug] [2023-12-11T11:23:41.710Z] [functions[us-central1-addorUpdateBoard]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateBoard).
+[debug] [2023-12-11T11:23:41.710Z] [functions[us-central1-addorUpdateCourse]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateCourse).
+[debug] [2023-12-11T11:23:41.710Z] [functions[us-central1-addorUpdateSubject]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateSubject).
+[debug] [2023-12-11T11:23:41.710Z] [functions[us-central1-addorUpdateLesson]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateLesson).
+[debug] [2023-12-11T11:23:41.711Z] [functions[us-central1-addorUpdateQuestion]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateQuestion).
+[debug] [2023-12-11T11:23:41.711Z] [functions[us-central1-addorUpdateAssessment]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateAssessment).
+[debug] [2023-12-11T11:23:41.712Z] [functions[us-central1-submittedStudentAssessment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2023-12-11T11:23:41.712Z] [functions[us-central1-createStudentAssessmentAttempt]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/createStudentAssessmentAttempt).
+[debug] [2023-12-11T11:23:41.712Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\student-functions" for Cloud Functions...
+[debug] [2023-12-11T11:23:43.523Z] ----------------------------------------------------------------------
+[debug] [2023-12-11T11:23:43.529Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-11T11:23:43.530Z] CLI Version:   12.9.1
+[debug] [2023-12-11T11:23:43.531Z] Platform:      win32
+[debug] [2023-12-11T11:23:43.531Z] Node Version:  v18.16.0
+[debug] [2023-12-11T11:23:43.533Z] Time:          Mon Dec 11 2023 16:53:43 GMT+0530 (India Standard Time)
+[debug] [2023-12-11T11:23:43.534Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-11T11:23:43.841Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-11T11:23:43.842Z] > authorizing via signed-in user (admin@apporbis.com)
+[debug] [2023-12-11T11:23:43.843Z] [iam] checking project vijuedtech for permissions ["firebase.projects.get"]
+[debug] [2023-12-11T11:23:43.847Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions [none]
+[debug] [2023-12-11T11:23:43.848Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions x-goog-quota-user=projects/vijuedtech
+[debug] [2023-12-11T11:23:43.848Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:23:41.715Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:23:44.659Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:23:44.659Z] Building nodejs source
+[debug] [2023-12-11T11:23:44.660Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:23:44.662Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:23:44.678Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8084
+
+[debug] [2023-12-11T11:23:45.364Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions 200
+[debug] [2023-12-11T11:23:45.365Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] !  functions: Functions Emulator unable to start on port 5000, starting on 5001 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5001 instead."}}
+[debug] [2023-12-11T11:23:45.376Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-11T11:23:45.379Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:23:45.380Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:23:45.381Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig [none]
+[debug] [2023-12-11T11:23:45.753Z] Got response from /__/functions.yaml {"endpoints":{"registerStudent":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"registerStudent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:23:45.774Z] [functions] Loaded functions definitions from source: registerStudent.
+[debug] [2023-12-11T11:23:45.806Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig 200
+[debug] [2023-12-11T11:23:45.774Z] [functions[us-central1-registerStudent]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/registerStudent).
+[info] i  functions: Loaded functions: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt, registerStudent 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-12-11T11:23:45.806Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig {"projectId":"vijuedtech","storageBucket":"vijuedtech.appspot.com","locationId":"us-central"}
+[debug] [2023-12-11T11:23:45.819Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-11T11:23:45.825Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:23:48.734Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:23:48.734Z] Building nodejs source
+[debug] [2023-12-11T11:23:48.735Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:23:48.738Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:23:48.750Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8685
+
+[debug] [2023-12-11T11:23:49.380Z] Got response from /__/functions.yaml {"endpoints":{"getLiveDate":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"getLiveDate"},"addorUpdateEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateEmployee"},"addorUpdateteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateteacher"},"loginCheckEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckEmployee"},"loginCheckteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckteacher"},"addorUpdateBoard":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateBoard"},"addorUpdateCourse":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateCourse"},"addorUpdateSubject":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateSubject"},"addorUpdateLesson":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateLesson"},"addorUpdateQuestion":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateQuestion"},"addorUpdateAssessment":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateAssessment"},"submittedStudentAssessment":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/vijuedtech/databases/(default)/documents/StudentAssessments/{stdasmtuid}"},"retry":false},"labels":{},"entryPoint":"submittedStudentAssessment"},"createStudentAssessmentAttempt":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"createStudentAssessmentAttempt"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:23:49.415Z] [functions] Loaded functions definitions from source: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt.
+[debug] [2023-12-11T11:23:49.417Z] [functions[us-central1-getLiveDate]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/getLiveDate).
+[debug] [2023-12-11T11:23:49.417Z] [functions[us-central1-addorUpdateEmployee]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateEmployee).
+[debug] [2023-12-11T11:23:49.418Z] [functions[us-central1-addorUpdateteacher]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateteacher).
+[debug] [2023-12-11T11:23:49.418Z] [functions[us-central1-loginCheckEmployee]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/loginCheckEmployee).
+[debug] [2023-12-11T11:23:49.418Z] [functions[us-central1-loginCheckteacher]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/loginCheckteacher).
+[debug] [2023-12-11T11:23:49.418Z] [functions[us-central1-addorUpdateBoard]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateBoard).
+[debug] [2023-12-11T11:23:49.418Z] [functions[us-central1-addorUpdateCourse]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateCourse).
+[debug] [2023-12-11T11:23:49.418Z] [functions[us-central1-addorUpdateSubject]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateSubject).
+[debug] [2023-12-11T11:23:49.418Z] [functions[us-central1-addorUpdateLesson]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateLesson).
+[debug] [2023-12-11T11:23:49.418Z] [functions[us-central1-addorUpdateQuestion]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateQuestion).
+[debug] [2023-12-11T11:23:49.419Z] [functions[us-central1-addorUpdateAssessment]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateAssessment).
+[debug] [2023-12-11T11:23:49.419Z] [functions[us-central1-submittedStudentAssessment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2023-12-11T11:23:49.419Z] [functions[us-central1-createStudentAssessmentAttempt]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/createStudentAssessmentAttempt).
+[debug] [2023-12-11T11:23:49.419Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\student-functions" for Cloud Functions...
+[debug] [2023-12-11T11:23:49.422Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:23:51.217Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:23:51.218Z] Building nodejs source
+[debug] [2023-12-11T11:23:51.218Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:23:51.220Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:23:51.232Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8983
+
+[debug] [2023-12-11T11:23:51.995Z] Got response from /__/functions.yaml {"endpoints":{"registerStudent":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"registerStudent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:23:52.012Z] [functions] Loaded functions definitions from source: registerStudent.
+[debug] [2023-12-11T11:23:52.013Z] [functions[us-central1-registerStudent]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/registerStudent).
+[info] i  functions: Loaded functions: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt, registerStudent 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-12-11T11:25:05.841Z] ----------------------------------------------------------------------
+[debug] [2023-12-11T11:25:05.843Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-11T11:25:05.845Z] CLI Version:   12.9.1
+[debug] [2023-12-11T11:25:05.845Z] Platform:      win32
+[debug] [2023-12-11T11:25:05.845Z] Node Version:  v18.16.0
+[debug] [2023-12-11T11:25:05.846Z] Time:          Mon Dec 11 2023 16:55:05 GMT+0530 (India Standard Time)
+[debug] [2023-12-11T11:25:05.847Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-11T11:25:05.938Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-11T11:25:05.939Z] > authorizing via signed-in user (admin@apporbis.com)
+[debug] [2023-12-11T11:25:05.939Z] [iam] checking project vijuedtech for permissions ["firebase.projects.get"]
+[debug] [2023-12-11T11:25:05.941Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions [none]
+[debug] [2023-12-11T11:25:05.941Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions x-goog-quota-user=projects/vijuedtech
+[debug] [2023-12-11T11:25:05.942Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:25:07.449Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions 200
+[debug] [2023-12-11T11:25:07.450Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] !  functions: Functions Emulator unable to start on port 5000, starting on 5001 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5001 instead."}}
+[debug] [2023-12-11T11:25:07.464Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-11T11:25:07.468Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:25:07.470Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:25:07.471Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig [none]
+[debug] [2023-12-11T11:25:08.139Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig 200
+[debug] [2023-12-11T11:25:08.140Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig {"projectId":"vijuedtech","storageBucket":"vijuedtech.appspot.com","locationId":"us-central"}
+[debug] [2023-12-11T11:25:08.177Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-11T11:25:08.184Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:25:09.811Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:25:09.812Z] Building nodejs source
+[debug] [2023-12-11T11:25:09.812Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:25:09.815Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:25:09.823Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8629
+
+[debug] [2023-12-11T11:25:10.507Z] Got response from /__/functions.yaml {"endpoints":{"getLiveDate":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"getLiveDate"},"addorUpdateEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateEmployee"},"addorUpdateteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateteacher"},"loginCheckEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckEmployee"},"loginCheckteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckteacher"},"addorUpdateBoard":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateBoard"},"addorUpdateCourse":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateCourse"},"addorUpdateSubject":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateSubject"},"addorUpdateLesson":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateLesson"},"addorUpdateQuestion":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateQuestion"},"addorUpdateAssessment":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateAssessment"},"submittedStudentAssessment":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/vijuedtech/databases/(default)/documents/StudentAssessments/{stdasmtuid}"},"retry":false},"labels":{},"entryPoint":"submittedStudentAssessment"},"createStudentAssessmentAttempt":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"createStudentAssessmentAttempt"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:25:10.534Z] [functions] Loaded functions definitions from source: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt.
+[debug] [2023-12-11T11:25:10.534Z] [functions[us-central1-getLiveDate]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/getLiveDate).
+[debug] [2023-12-11T11:25:10.535Z] [functions[us-central1-addorUpdateEmployee]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateEmployee).
+[debug] [2023-12-11T11:25:10.535Z] [functions[us-central1-addorUpdateteacher]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateteacher).
+[debug] [2023-12-11T11:25:10.535Z] [functions[us-central1-loginCheckEmployee]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/loginCheckEmployee).
+[debug] [2023-12-11T11:25:10.535Z] [functions[us-central1-loginCheckteacher]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/loginCheckteacher).
+[debug] [2023-12-11T11:25:10.535Z] [functions[us-central1-addorUpdateBoard]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateBoard).
+[debug] [2023-12-11T11:25:10.535Z] [functions[us-central1-addorUpdateCourse]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateCourse).
+[debug] [2023-12-11T11:25:10.536Z] [functions[us-central1-addorUpdateSubject]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateSubject).
+[debug] [2023-12-11T11:25:10.536Z] [functions[us-central1-addorUpdateLesson]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateLesson).
+[debug] [2023-12-11T11:25:10.536Z] [functions[us-central1-addorUpdateQuestion]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateQuestion).
+[debug] [2023-12-11T11:25:10.536Z] [functions[us-central1-addorUpdateAssessment]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateAssessment).
+[debug] [2023-12-11T11:25:10.536Z] [functions[us-central1-submittedStudentAssessment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2023-12-11T11:25:10.537Z] [functions[us-central1-createStudentAssessmentAttempt]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/createStudentAssessmentAttempt).
+[debug] [2023-12-11T11:25:10.537Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\student-functions" for Cloud Functions...
+[debug] [2023-12-11T11:25:10.539Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:25:12.012Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:25:12.012Z] Building nodejs source
+[debug] [2023-12-11T11:25:12.012Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:25:12.013Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:25:12.023Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8023
+
+[debug] [2023-12-11T11:25:12.703Z] Got response from /__/functions.yaml {"endpoints":{"registerStudent":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"registerStudent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:25:12.720Z] [functions] Loaded functions definitions from source: registerStudent.
+[debug] [2023-12-11T11:25:12.721Z] [functions[us-central1-registerStudent]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/registerStudent).
+[info] i  functions: Loaded functions: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt, registerStudent 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-12-11T11:27:03.892Z] ----------------------------------------------------------------------
+[debug] [2023-12-11T11:27:03.895Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-11T11:27:03.895Z] CLI Version:   12.9.1
+[debug] [2023-12-11T11:27:03.896Z] Platform:      win32
+[debug] [2023-12-11T11:27:03.896Z] Node Version:  v18.16.0
+[debug] [2023-12-11T11:27:03.897Z] Time:          Mon Dec 11 2023 16:57:03 GMT+0530 (India Standard Time)
+[debug] [2023-12-11T11:27:03.897Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-11T11:27:04.002Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-11T11:27:04.003Z] > authorizing via signed-in user (admin@apporbis.com)
+[debug] [2023-12-11T11:27:04.003Z] [iam] checking project vijuedtech for permissions ["firebase.projects.get"]
+[debug] [2023-12-11T11:27:04.005Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions [none]
+[debug] [2023-12-11T11:27:04.006Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions x-goog-quota-user=projects/vijuedtech
+[debug] [2023-12-11T11:27:04.006Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:27:05.567Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions 200
+[debug] [2023-12-11T11:27:05.567Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] !  functions: Functions Emulator unable to start on port 5000, starting on 5002 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5002 instead."}}
+[debug] [2023-12-11T11:27:05.576Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-11T11:27:05.593Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:27:05.595Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:27:05.596Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig [none]
+[debug] [2023-12-11T11:27:06.279Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig 200
+[debug] [2023-12-11T11:27:06.279Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig {"projectId":"vijuedtech","storageBucket":"vijuedtech.appspot.com","locationId":"us-central"}
+[debug] [2023-12-11T11:27:06.320Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-11T11:27:06.333Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:27:08.702Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:27:08.702Z] Building nodejs source
+[debug] [2023-12-11T11:27:08.703Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:27:08.708Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:27:08.725Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8081
+
+[debug] [2023-12-11T11:27:09.816Z] Got response from /__/functions.yaml {"endpoints":{"getLiveDate":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"getLiveDate"},"addorUpdateEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateEmployee"},"addorUpdateteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateteacher"},"loginCheckEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckEmployee"},"loginCheckteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckteacher"},"addorUpdateBoard":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateBoard"},"addorUpdateCourse":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateCourse"},"addorUpdateSubject":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateSubject"},"addorUpdateLesson":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateLesson"},"addorUpdateQuestion":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateQuestion"},"addorUpdateAssessment":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateAssessment"},"submittedStudentAssessment":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/vijuedtech/databases/(default)/documents/StudentAssessments/{stdasmtuid}"},"retry":false},"labels":{},"entryPoint":"submittedStudentAssessment"},"createStudentAssessmentAttempt":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"createStudentAssessmentAttempt"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:27:09.853Z] [functions] Loaded functions definitions from source: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt.
+[debug] [2023-12-11T11:27:09.854Z] [functions[us-central1-getLiveDate]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/getLiveDate).
+[debug] [2023-12-11T11:27:09.854Z] [functions[us-central1-addorUpdateEmployee]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/addorUpdateEmployee).
+[debug] [2023-12-11T11:27:09.855Z] [functions[us-central1-addorUpdateteacher]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/addorUpdateteacher).
+[debug] [2023-12-11T11:27:09.855Z] [functions[us-central1-loginCheckEmployee]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/loginCheckEmployee).
+[debug] [2023-12-11T11:27:09.855Z] [functions[us-central1-loginCheckteacher]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/loginCheckteacher).
+[debug] [2023-12-11T11:27:09.855Z] [functions[us-central1-addorUpdateBoard]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/addorUpdateBoard).
+[debug] [2023-12-11T11:27:09.855Z] [functions[us-central1-addorUpdateCourse]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/addorUpdateCourse).
+[debug] [2023-12-11T11:27:09.856Z] [functions[us-central1-addorUpdateSubject]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/addorUpdateSubject).
+[debug] [2023-12-11T11:27:09.856Z] [functions[us-central1-addorUpdateLesson]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/addorUpdateLesson).
+[debug] [2023-12-11T11:27:09.856Z] [functions[us-central1-addorUpdateQuestion]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/addorUpdateQuestion).
+[debug] [2023-12-11T11:27:09.857Z] [functions[us-central1-addorUpdateAssessment]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/addorUpdateAssessment).
+[debug] [2023-12-11T11:27:09.857Z] [functions[us-central1-submittedStudentAssessment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2023-12-11T11:27:09.857Z] [functions[us-central1-createStudentAssessmentAttempt]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/createStudentAssessmentAttempt).
+[debug] [2023-12-11T11:27:09.858Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\student-functions" for Cloud Functions...
+[debug] [2023-12-11T11:27:09.861Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:27:11.967Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:27:11.967Z] Building nodejs source
+[debug] [2023-12-11T11:27:11.968Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:27:11.969Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:27:11.983Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8557
+
+[debug] [2023-12-11T11:27:13.337Z] Got response from /__/functions.yaml {"endpoints":{"registerStudent":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"registerStudent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:27:13.383Z] [functions] Loaded functions definitions from source: registerStudent.
+[debug] [2023-12-11T11:27:13.383Z] [functions[us-central1-registerStudent]] http function initialized (http://127.0.0.1:5002/vijuedtech/us-central1/registerStudent).
+[info] i  functions: Loaded functions: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt, registerStudent 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-12-11T11:38:20.164Z] ----------------------------------------------------------------------
+[debug] [2023-12-11T11:38:20.167Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-11T11:38:20.168Z] CLI Version:   12.9.1
+[debug] [2023-12-11T11:38:20.168Z] Platform:      win32
+[debug] [2023-12-11T11:38:20.168Z] Node Version:  v18.16.0
+[debug] [2023-12-11T11:38:20.170Z] Time:          Mon Dec 11 2023 17:08:20 GMT+0530 (India Standard Time)
+[debug] [2023-12-11T11:38:20.170Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-11T11:38:20.295Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-11T11:38:20.296Z] > authorizing via signed-in user (admin@apporbis.com)
+[debug] [2023-12-11T11:38:20.297Z] [iam] checking project vijuedtech for permissions ["firebase.projects.get"]
+[debug] [2023-12-11T11:38:20.301Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions [none]
+[debug] [2023-12-11T11:38:20.302Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions x-goog-quota-user=projects/vijuedtech
+[debug] [2023-12-11T11:38:20.302Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:38:21.807Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions 200
+[debug] [2023-12-11T11:38:21.808Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:38:21.815Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-11T11:38:21.817Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:38:21.819Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:38:21.819Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig [none]
+[debug] [2023-12-11T11:38:25.338Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig 200
+[debug] [2023-12-11T11:38:25.338Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig {"projectId":"vijuedtech","storageBucket":"vijuedtech.appspot.com","locationId":"us-central"}
+[debug] [2023-12-11T11:38:25.380Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-11T11:38:25.392Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:38:27.271Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:38:27.271Z] Building nodejs source
+[debug] [2023-12-11T11:38:27.272Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:38:27.274Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:38:27.301Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8347
+
+[debug] [2023-12-11T11:38:28.312Z] Got response from /__/functions.yaml {"endpoints":{"getLiveDate":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"getLiveDate"},"addorUpdateEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateEmployee"},"addorUpdateteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateteacher"},"loginCheckEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckEmployee"},"loginCheckteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckteacher"},"addorUpdateBoard":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateBoard"},"addorUpdateCourse":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateCourse"},"addorUpdateSubject":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateSubject"},"addorUpdateLesson":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateLesson"},"addorUpdateQuestion":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateQuestion"},"addorUpdateAssessment":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateAssessment"},"submittedStudentAssessment":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/vijuedtech/databases/(default)/documents/StudentAssessments/{stdasmtuid}"},"retry":false},"labels":{},"entryPoint":"submittedStudentAssessment"},"createStudentAssessmentAttempt":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"createStudentAssessmentAttempt"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:38:28.340Z] [functions] Loaded functions definitions from source: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt.
+[debug] [2023-12-11T11:38:28.340Z] [functions[us-central1-getLiveDate]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/getLiveDate).
+[debug] [2023-12-11T11:38:28.340Z] [functions[us-central1-addorUpdateEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateEmployee).
+[debug] [2023-12-11T11:38:28.340Z] [functions[us-central1-addorUpdateteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateteacher).
+[debug] [2023-12-11T11:38:28.341Z] [functions[us-central1-loginCheckEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/loginCheckEmployee).
+[debug] [2023-12-11T11:38:28.341Z] [functions[us-central1-loginCheckteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/loginCheckteacher).
+[debug] [2023-12-11T11:38:28.341Z] [functions[us-central1-addorUpdateBoard]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateBoard).
+[debug] [2023-12-11T11:38:28.341Z] [functions[us-central1-addorUpdateCourse]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateCourse).
+[debug] [2023-12-11T11:38:28.341Z] [functions[us-central1-addorUpdateSubject]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateSubject).
+[debug] [2023-12-11T11:38:28.341Z] [functions[us-central1-addorUpdateLesson]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateLesson).
+[debug] [2023-12-11T11:38:28.341Z] [functions[us-central1-addorUpdateQuestion]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateQuestion).
+[debug] [2023-12-11T11:38:28.341Z] [functions[us-central1-addorUpdateAssessment]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateAssessment).
+[debug] [2023-12-11T11:38:28.342Z] [functions[us-central1-submittedStudentAssessment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2023-12-11T11:38:28.342Z] [functions[us-central1-createStudentAssessmentAttempt]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/createStudentAssessmentAttempt).
+[debug] [2023-12-11T11:38:28.342Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\student-functions" for Cloud Functions...
+[debug] [2023-12-11T11:38:28.344Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:38:30.085Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:38:30.085Z] Building nodejs source
+[debug] [2023-12-11T11:38:30.086Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:38:30.098Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:38:30.107Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8444
+
+[debug] [2023-12-11T11:38:31.170Z] Got response from /__/functions.yaml {"endpoints":{"registerStudent":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"registerStudent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:38:31.192Z] [functions] Loaded functions definitions from source: registerStudent.
+[debug] [2023-12-11T11:38:31.192Z] [functions[us-central1-registerStudent]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/registerStudent).
+[info] i  functions: Loaded functions: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt, registerStudent 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-12-11T11:58:09.842Z] ----------------------------------------------------------------------
+[debug] [2023-12-11T11:58:09.848Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-11T11:58:09.849Z] CLI Version:   12.9.1
+[debug] [2023-12-11T11:58:09.850Z] Platform:      win32
+[debug] [2023-12-11T11:58:09.850Z] Node Version:  v18.16.0
+[debug] [2023-12-11T11:58:09.852Z] Time:          Mon Dec 11 2023 17:28:09 GMT+0530 (India Standard Time)
+[debug] [2023-12-11T11:58:09.853Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-11T11:58:10.001Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-11T11:58:10.004Z] > authorizing via signed-in user (admin@apporbis.com)
+[debug] [2023-12-11T11:58:10.004Z] [iam] checking project vijuedtech for permissions ["firebase.projects.get"]
+[debug] [2023-12-11T11:58:10.009Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions [none]
+[debug] [2023-12-11T11:58:10.010Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions x-goog-quota-user=projects/vijuedtech
+[debug] [2023-12-11T11:58:10.010Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:58:11.539Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions 200
+[debug] [2023-12-11T11:58:11.539Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] !  functions: Functions Emulator unable to start on port 5000, starting on 5001 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5001 instead."}}
+[debug] [2023-12-11T11:58:11.553Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-11T11:58:11.557Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:58:11.559Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:58:11.560Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig [none]
+[debug] [2023-12-11T11:58:12.337Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig 200
+[debug] [2023-12-11T11:58:12.338Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig {"projectId":"vijuedtech","storageBucket":"vijuedtech.appspot.com","locationId":"us-central"}
+[debug] [2023-12-11T11:58:12.378Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-11T11:58:12.385Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:58:14.116Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:58:14.116Z] Building nodejs source
+[debug] [2023-12-11T11:58:14.117Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:58:14.121Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:58:14.135Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8799
+
+[debug] [2023-12-11T11:58:15.135Z] Got response from /__/functions.yaml {"endpoints":{"getLiveDate":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"getLiveDate"},"addorUpdateEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateEmployee"},"addorUpdateteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateteacher"},"loginCheckEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckEmployee"},"loginCheckteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckteacher"},"addorUpdateBoard":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateBoard"},"addorUpdateCourse":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateCourse"},"addorUpdateSubject":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateSubject"},"addorUpdateLesson":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateLesson"},"addorUpdateQuestion":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateQuestion"},"addorUpdateAssessment":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateAssessment"},"submittedStudentAssessment":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/vijuedtech/databases/(default)/documents/StudentAssessments/{stdasmtuid}"},"retry":false},"labels":{},"entryPoint":"submittedStudentAssessment"},"createStudentAssessmentAttempt":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"createStudentAssessmentAttempt"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:58:15.163Z] [functions] Loaded functions definitions from source: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt.
+[debug] [2023-12-11T11:58:15.163Z] [functions[us-central1-getLiveDate]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/getLiveDate).
+[debug] [2023-12-11T11:58:15.164Z] [functions[us-central1-addorUpdateEmployee]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateEmployee).
+[debug] [2023-12-11T11:58:15.164Z] [functions[us-central1-addorUpdateteacher]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateteacher).
+[debug] [2023-12-11T11:58:15.164Z] [functions[us-central1-loginCheckEmployee]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/loginCheckEmployee).
+[debug] [2023-12-11T11:58:15.164Z] [functions[us-central1-loginCheckteacher]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/loginCheckteacher).
+[debug] [2023-12-11T11:58:15.164Z] [functions[us-central1-addorUpdateBoard]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateBoard).
+[debug] [2023-12-11T11:58:15.164Z] [functions[us-central1-addorUpdateCourse]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateCourse).
+[debug] [2023-12-11T11:58:15.164Z] [functions[us-central1-addorUpdateSubject]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateSubject).
+[debug] [2023-12-11T11:58:15.164Z] [functions[us-central1-addorUpdateLesson]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateLesson).
+[debug] [2023-12-11T11:58:15.164Z] [functions[us-central1-addorUpdateQuestion]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateQuestion).
+[debug] [2023-12-11T11:58:15.165Z] [functions[us-central1-addorUpdateAssessment]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/addorUpdateAssessment).
+[debug] [2023-12-11T11:58:15.165Z] [functions[us-central1-submittedStudentAssessment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2023-12-11T11:58:15.166Z] [functions[us-central1-createStudentAssessmentAttempt]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/createStudentAssessmentAttempt).
+[debug] [2023-12-11T11:58:15.166Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\student-functions" for Cloud Functions...
+[debug] [2023-12-11T11:58:15.167Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:58:16.682Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:58:16.682Z] Building nodejs source
+[debug] [2023-12-11T11:58:16.682Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:58:16.683Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:58:16.712Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8655
+
+[debug] [2023-12-11T11:58:17.676Z] Got response from /__/functions.yaml {"endpoints":{"registerStudent":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"registerStudent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T11:58:17.693Z] [functions] Loaded functions definitions from source: registerStudent.
+[debug] [2023-12-11T11:58:17.693Z] [functions[us-central1-registerStudent]] http function initialized (http://127.0.0.1:5001/vijuedtech/us-central1/registerStudent).
+[info] i  functions: Loaded functions: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt, registerStudent 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-12-11T11:59:37.638Z] ----------------------------------------------------------------------
+[debug] [2023-12-11T11:59:37.641Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-11T11:59:37.641Z] CLI Version:   12.9.1
+[debug] [2023-12-11T11:59:37.642Z] Platform:      win32
+[debug] [2023-12-11T11:59:37.643Z] Node Version:  v18.16.0
+[debug] [2023-12-11T11:59:37.644Z] Time:          Mon Dec 11 2023 17:29:37 GMT+0530 (India Standard Time)
+[debug] [2023-12-11T11:59:37.645Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-11T11:59:37.742Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-11T11:59:37.743Z] > authorizing via signed-in user (admin@apporbis.com)
+[debug] [2023-12-11T11:59:37.743Z] [iam] checking project vijuedtech for permissions ["firebase.projects.get"]
+[debug] [2023-12-11T11:59:37.747Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions [none]
+[debug] [2023-12-11T11:59:37.747Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions x-goog-quota-user=projects/vijuedtech
+[debug] [2023-12-11T11:59:37.747Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:59:39.288Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions 200
+[debug] [2023-12-11T11:59:39.290Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T11:59:39.306Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-11T11:59:39.309Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:59:39.312Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T11:59:39.313Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig [none]
+[debug] [2023-12-11T11:59:39.849Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig 200
+[debug] [2023-12-11T11:59:39.851Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig {"projectId":"vijuedtech","storageBucket":"vijuedtech.appspot.com","locationId":"us-central"}
+[debug] [2023-12-11T11:59:39.901Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-11T11:59:39.914Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T11:59:41.509Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T11:59:41.510Z] Building nodejs source
+[debug] [2023-12-11T11:59:41.511Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T11:59:41.515Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T11:59:41.526Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-12-11T12:00:44.016Z] ----------------------------------------------------------------------
+[debug] [2023-12-11T12:00:44.020Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-11T12:00:44.021Z] CLI Version:   12.9.1
+[debug] [2023-12-11T12:00:44.021Z] Platform:      win32
+[debug] [2023-12-11T12:00:44.022Z] Node Version:  v18.16.0
+[debug] [2023-12-11T12:00:44.023Z] Time:          Mon Dec 11 2023 17:30:44 GMT+0530 (India Standard Time)
+[debug] [2023-12-11T12:00:44.023Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-11T12:00:44.129Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-11T12:00:44.130Z] > authorizing via signed-in user (admin@apporbis.com)
+[debug] [2023-12-11T12:00:44.131Z] [iam] checking project vijuedtech for permissions ["firebase.projects.get"]
+[debug] [2023-12-11T12:00:44.135Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions [none]
+[debug] [2023-12-11T12:00:44.135Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions x-goog-quota-user=projects/vijuedtech
+[debug] [2023-12-11T12:00:44.135Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T12:00:45.661Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions 200
+[debug] [2023-12-11T12:00:45.662Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-11T12:00:45.676Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-11T12:00:45.679Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T12:00:45.681Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\admin_apporbis_com_application_default_credentials.json
+[debug] [2023-12-11T12:00:45.682Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig [none]
+[debug] [2023-12-11T12:00:46.113Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig 200
+[debug] [2023-12-11T12:00:46.114Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech/adminSdkConfig {"projectId":"vijuedtech","storageBucket":"vijuedtech.appspot.com","locationId":"us-central"}
+[debug] [2023-12-11T12:00:46.167Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-11T12:00:46.175Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T12:00:47.950Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T12:00:47.950Z] Building nodejs source
+[debug] [2023-12-11T12:00:47.951Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T12:00:47.954Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T12:00:47.968Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8480
+
+[debug] [2023-12-11T12:00:48.737Z] Got response from /__/functions.yaml {"endpoints":{"getLiveDate":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"getLiveDate"},"addorUpdateEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateEmployee"},"addorUpdateteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateteacher"},"loginCheckEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckEmployee"},"loginCheckteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckteacher"},"addorUpdateBoard":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateBoard"},"addorUpdateCourse":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateCourse"},"addorUpdateSubject":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateSubject"},"addorUpdateLesson":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateLesson"},"addorUpdateQuestion":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateQuestion"},"addorUpdateAssessment":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateAssessment"},"submittedStudentAssessment":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/vijuedtech/databases/(default)/documents/StudentAssessments/{stdasmtuid}"},"retry":false},"labels":{},"entryPoint":"submittedStudentAssessment"},"createStudentAssessmentAttempt":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"createStudentAssessmentAttempt"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T12:00:48.768Z] [functions] Loaded functions definitions from source: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt.
+[debug] [2023-12-11T12:00:48.770Z] [functions[us-central1-getLiveDate]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/getLiveDate).
+[debug] [2023-12-11T12:00:48.770Z] [functions[us-central1-addorUpdateEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateEmployee).
+[debug] [2023-12-11T12:00:48.770Z] [functions[us-central1-addorUpdateteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateteacher).
+[debug] [2023-12-11T12:00:48.770Z] [functions[us-central1-loginCheckEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/loginCheckEmployee).
+[debug] [2023-12-11T12:00:48.770Z] [functions[us-central1-loginCheckteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/loginCheckteacher).
+[debug] [2023-12-11T12:00:48.770Z] [functions[us-central1-addorUpdateBoard]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateBoard).
+[debug] [2023-12-11T12:00:48.771Z] [functions[us-central1-addorUpdateCourse]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateCourse).
+[debug] [2023-12-11T12:00:48.771Z] [functions[us-central1-addorUpdateSubject]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateSubject).
+[debug] [2023-12-11T12:00:48.771Z] [functions[us-central1-addorUpdateLesson]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateLesson).
+[debug] [2023-12-11T12:00:48.771Z] [functions[us-central1-addorUpdateQuestion]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateQuestion).
+[debug] [2023-12-11T12:00:48.771Z] [functions[us-central1-addorUpdateAssessment]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/addorUpdateAssessment).
+[debug] [2023-12-11T12:00:48.772Z] [functions[us-central1-submittedStudentAssessment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2023-12-11T12:00:48.772Z] [functions[us-central1-createStudentAssessmentAttempt]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/createStudentAssessmentAttempt).
+[debug] [2023-12-11T12:00:48.772Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\student-functions" for Cloud Functions...
+[debug] [2023-12-11T12:00:48.774Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-11T12:00:50.498Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-11T12:00:50.499Z] Building nodejs source
+[debug] [2023-12-11T12:00:50.499Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-11T12:00:50.501Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-11T12:00:50.514Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8546
+
+[debug] [2023-12-11T12:00:51.301Z] Got response from /__/functions.yaml {"endpoints":{"registerStudent":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"registerStudent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-11T12:00:51.325Z] [functions] Loaded functions definitions from source: registerStudent.
+[debug] [2023-12-11T12:00:51.325Z] [functions[us-central1-registerStudent]] http function initialized (http://127.0.0.1:5000/vijuedtech/us-central1/registerStudent).
+[info] i  functions: Loaded functions: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt, registerStudent 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-12-13T07:26:02.547Z] ----------------------------------------------------------------------
+[debug] [2023-12-13T07:26:02.553Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-13T07:26:02.555Z] CLI Version:   13.0.1
+[debug] [2023-12-13T07:26:02.556Z] Platform:      win32
+[debug] [2023-12-13T07:26:02.557Z] Node Version:  v18.16.0
+[debug] [2023-12-13T07:26:02.562Z] Time:          Wed Dec 13 2023 12:56:02 GMT+0530 (India Standard Time)
+[debug] [2023-12-13T07:26:02.563Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-13T07:26:02.591Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-12-13T07:26:03.252Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-13T07:26:03.253Z] > authorizing via signed-in user (apporbisproject@gmail.com)
+[debug] [2023-12-13T07:26:03.254Z] [iam] checking project vijuedtech-7db78 for permissions ["firebase.projects.get"]
+[debug] [2023-12-13T07:26:03.256Z] > refreshing access token with scopes: []
+[debug] [2023-12-13T07:26:03.260Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-12-13T07:26:03.260Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-13T07:26:03.564Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-12-13T07:26:03.565Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-13T07:26:03.590Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions [none]
+[debug] [2023-12-13T07:26:03.590Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions x-goog-quota-user=projects/vijuedtech-7db78
+[debug] [2023-12-13T07:26:03.591Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-13T07:26:03.913Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-12-13T07:26:03.914Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-12-13T07:26:05.086Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions 200
+[debug] [2023-12-13T07:26:05.086Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-13T07:26:05.104Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-13T07:26:05.109Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\apporbisproject_gmail_com_application_default_credentials.json
+[debug] [2023-12-13T07:26:05.112Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\apporbisproject_gmail_com_application_default_credentials.json
+[debug] [2023-12-13T07:26:05.113Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech-7db78/adminSdkConfig [none]
+[debug] [2023-12-13T07:26:05.818Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech-7db78/adminSdkConfig 200
+[debug] [2023-12-13T07:26:05.819Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech-7db78/adminSdkConfig {"projectId":"vijuedtech-7db78","storageBucket":"vijuedtech-7db78.appspot.com","locationId":"us-central"}
+[debug] [2023-12-13T07:26:05.853Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-13T07:26:05.871Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-13T07:26:09.409Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-13T07:26:09.410Z] Building nodejs source
+[debug] [2023-12-13T07:26:09.411Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-13T07:26:09.415Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-13T07:26:09.446Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8357
+
+[debug] [2023-12-13T07:26:11.770Z] Got response from /__/functions.yaml {"endpoints":{"getLiveDate":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"getLiveDate"},"addorUpdateEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateEmployee"},"addorUpdateteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateteacher"},"loginCheckEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckEmployee"},"loginCheckteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckteacher"},"addorUpdateBoard":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateBoard"},"addorUpdateCourse":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateCourse"},"addorUpdateSubject":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateSubject"},"addorUpdateLesson":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateLesson"},"addorUpdateQuestion":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateQuestion"},"addorUpdateAssessment":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateAssessment"},"submittedStudentAssessment":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/vijuedtech-7db78/databases/(default)/documents/StudentAssessments/{stdasmtuid}"},"retry":false},"labels":{},"entryPoint":"submittedStudentAssessment"},"createStudentAssessmentAttempt":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"createStudentAssessmentAttempt"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-13T07:26:11.846Z] [functions] Loaded functions definitions from source: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt.
+[debug] [2023-12-13T07:26:11.848Z] [functions[us-central1-getLiveDate]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/getLiveDate).
+[debug] [2023-12-13T07:26:11.849Z] [functions[us-central1-addorUpdateEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateEmployee).
+[debug] [2023-12-13T07:26:11.849Z] [functions[us-central1-addorUpdateteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateteacher).
+[debug] [2023-12-13T07:26:11.849Z] [functions[us-central1-loginCheckEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/loginCheckEmployee).
+[debug] [2023-12-13T07:26:11.850Z] [functions[us-central1-loginCheckteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/loginCheckteacher).
+[debug] [2023-12-13T07:26:11.850Z] [functions[us-central1-addorUpdateBoard]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateBoard).
+[debug] [2023-12-13T07:26:11.851Z] [functions[us-central1-addorUpdateCourse]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateCourse).
+[debug] [2023-12-13T07:26:11.851Z] [functions[us-central1-addorUpdateSubject]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateSubject).
+[debug] [2023-12-13T07:26:11.851Z] [functions[us-central1-addorUpdateLesson]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateLesson).
+[debug] [2023-12-13T07:26:11.852Z] [functions[us-central1-addorUpdateQuestion]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateQuestion).
+[debug] [2023-12-13T07:26:11.852Z] [functions[us-central1-addorUpdateAssessment]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateAssessment).
+[debug] [2023-12-13T07:26:11.853Z] [functions[us-central1-submittedStudentAssessment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2023-12-13T07:26:11.853Z] [functions[us-central1-createStudentAssessmentAttempt]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/createStudentAssessmentAttempt).
+[debug] [2023-12-13T07:26:11.853Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\student-functions" for Cloud Functions...
+[debug] [2023-12-13T07:26:11.856Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-13T07:26:14.390Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-13T07:26:14.391Z] Building nodejs source
+[debug] [2023-12-13T07:26:14.391Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-13T07:26:14.394Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-13T07:26:14.412Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8540
+
+[debug] [2023-12-13T07:26:16.547Z] Got response from /__/functions.yaml {"endpoints":{"registerStudent":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"registerStudent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-13T07:26:16.587Z] [functions] Loaded functions definitions from source: registerStudent.
+[debug] [2023-12-13T07:26:16.588Z] [functions[us-central1-registerStudent]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/registerStudent).
+[info] i  functions: Loaded functions: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt, registerStudent 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-12-13T07:28:18.941Z] ----------------------------------------------------------------------
+[debug] [2023-12-13T07:28:18.944Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-12-13T07:28:18.945Z] CLI Version:   13.0.1
+[debug] [2023-12-13T07:28:18.945Z] Platform:      win32
+[debug] [2023-12-13T07:28:18.946Z] Node Version:  v18.16.0
+[debug] [2023-12-13T07:28:18.947Z] Time:          Wed Dec 13 2023 12:58:18 GMT+0530 (India Standard Time)
+[debug] [2023-12-13T07:28:18.947Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-13T07:28:19.105Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-13T07:28:19.106Z] > authorizing via signed-in user (apporbisproject@gmail.com)
+[debug] [2023-12-13T07:28:19.106Z] [iam] checking project vijuedtech-7db78 for permissions ["firebase.projects.get"]
+[debug] [2023-12-13T07:28:19.110Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions [none]
+[debug] [2023-12-13T07:28:19.110Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions x-goog-quota-user=projects/vijuedtech-7db78
+[debug] [2023-12-13T07:28:19.111Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-13T07:28:20.659Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions 200
+[debug] [2023-12-13T07:28:20.659Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vijuedtech-7db78:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-13T07:28:20.668Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-13T07:28:20.671Z] defaultcredentials: writing to file C:\Users\DELL\AppData\Roaming\firebase\apporbisproject_gmail_com_application_default_credentials.json
+[debug] [2023-12-13T07:28:20.673Z] DEBUG: Setting GAC to C:\Users\DELL\AppData\Roaming\firebase\apporbisproject_gmail_com_application_default_credentials.json
+[debug] [2023-12-13T07:28:20.678Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech-7db78/adminSdkConfig [none]
+[debug] [2023-12-13T07:28:22.237Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech-7db78/adminSdkConfig 200
+[debug] [2023-12-13T07:28:22.238Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vijuedtech-7db78/adminSdkConfig {"projectId":"vijuedtech-7db78","storageBucket":"vijuedtech-7db78.appspot.com","locationId":"us-central"}
+[debug] [2023-12-13T07:28:22.267Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\functions" for Cloud Functions...
+[debug] [2023-12-13T07:28:22.277Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-13T07:28:24.137Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-13T07:28:24.139Z] Building nodejs source
+[debug] [2023-12-13T07:28:24.143Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-13T07:28:24.149Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-13T07:28:24.162Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8090
+
+[debug] [2023-12-13T07:28:24.997Z] Got response from /__/functions.yaml {"endpoints":{"getLiveDate":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"getLiveDate"},"addorUpdateEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateEmployee"},"addorUpdateteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateteacher"},"loginCheckEmployee":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckEmployee"},"loginCheckteacher":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"loginCheckteacher"},"addorUpdateBoard":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateBoard"},"addorUpdateCourse":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateCourse"},"addorUpdateSubject":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateSubject"},"addorUpdateLesson":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateLesson"},"addorUpdateQuestion":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateQuestion"},"addorUpdateAssessment":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"addorUpdateAssessment"},"submittedStudentAssessment":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/vijuedtech-7db78/databases/(default)/documents/StudentAssessments/{stdasmtuid}"},"retry":false},"labels":{},"entryPoint":"submittedStudentAssessment"},"createStudentAssessmentAttempt":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"createStudentAssessmentAttempt"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-13T07:28:25.045Z] [functions] Loaded functions definitions from source: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt.
+[debug] [2023-12-13T07:28:25.045Z] [functions[us-central1-getLiveDate]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/getLiveDate).
+[debug] [2023-12-13T07:28:25.046Z] [functions[us-central1-addorUpdateEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateEmployee).
+[debug] [2023-12-13T07:28:25.046Z] [functions[us-central1-addorUpdateteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateteacher).
+[debug] [2023-12-13T07:28:25.046Z] [functions[us-central1-loginCheckEmployee]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/loginCheckEmployee).
+[debug] [2023-12-13T07:28:25.046Z] [functions[us-central1-loginCheckteacher]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/loginCheckteacher).
+[debug] [2023-12-13T07:28:25.046Z] [functions[us-central1-addorUpdateBoard]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateBoard).
+[debug] [2023-12-13T07:28:25.046Z] [functions[us-central1-addorUpdateCourse]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateCourse).
+[debug] [2023-12-13T07:28:25.046Z] [functions[us-central1-addorUpdateSubject]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateSubject).
+[debug] [2023-12-13T07:28:25.047Z] [functions[us-central1-addorUpdateLesson]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateLesson).
+[debug] [2023-12-13T07:28:25.047Z] [functions[us-central1-addorUpdateQuestion]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateQuestion).
+[debug] [2023-12-13T07:28:25.047Z] [functions[us-central1-addorUpdateAssessment]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/addorUpdateAssessment).
+[debug] [2023-12-13T07:28:25.047Z] [functions[us-central1-submittedStudentAssessment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2023-12-13T07:28:25.048Z] [functions[us-central1-createStudentAssessmentAttempt]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/createStudentAssessmentAttempt).
+[debug] [2023-12-13T07:28:25.048Z] [functions] Watching "C:\Users\DELL\Documents\viju-main\viju-main\student-functions" for Cloud Functions...
+[debug] [2023-12-13T07:28:25.049Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-12-13T07:28:26.699Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-12-13T07:28:26.700Z] Building nodejs source
+[debug] [2023-12-13T07:28:26.700Z] Failed to find version of module node: reached end of search path C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-12-13T07:28:26.701Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-13T07:28:26.721Z] Found firebase-functions binary at 'C:\Users\DELL\Documents\viju-main\viju-main\student-functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8943
+
+[debug] [2023-12-13T07:28:27.534Z] Got response from /__/functions.yaml {"endpoints":{"registerStudent":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"registerStudent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-12-13T07:28:27.555Z] [functions] Loaded functions definitions from source: registerStudent.
+[debug] [2023-12-13T07:28:27.557Z] [functions[us-central1-registerStudent]] http function initialized (http://127.0.0.1:5000/vijuedtech-7db78/us-central1/registerStudent).
+[info] i  functions: Loaded functions: getLiveDate, addorUpdateEmployee, addorUpdateteacher, loginCheckEmployee, loginCheckteacher, addorUpdateBoard, addorUpdateCourse, addorUpdateSubject, addorUpdateLesson, addorUpdateQuestion, addorUpdateAssessment, submittedStudentAssessment, createStudentAssessmentAttempt, registerStudent 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 

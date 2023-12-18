@@ -1,0 +1,96 @@
+//
+// Theme style
+//
+
+// Initialize
+@import 'init';
+
+// Components
+@import 'components/components';
+
+// Layout
+@import 'layout/base/layout';
+@import 'layout/layout';
+// @import "flatpickr";
+// @import '../../public/assets/plugins/datatables/datatables.bundle.css';
+@import '../css/datatableChanges.css';
+@import '~choices.js/public/assets/styles/base.css';
+@import '~choices.js/public/assets/styles/choices.css';
+@import '~quill/dist/quill.snow.css';
+// @import '../css/datatable-bs.css';
+
+.toastify {
+  background-image: unset;
+}
+.tippy-box[data-theme~='danger'] > .tippy-backdrop {
+  background-color: #f12e30;
+}
+@import '~daterangepicker';
+@import './vendors/plugins/daterangepicker';
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fslightbox-slide-btn-container {
+  display: none !important;
+}
+// .fslightbox-slide-btn-container-previous , .fslightbox-slide-btn-container-next{
+//   display: none !important;
+// }
+
+// .fslightbox-container > .fslightbox-absoluted {
+//   pointer-events: none;
+// }
+
+p {
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.choices__inner {
+  padding: 3.5px 3.5px 3.75px !important;
+  min-height: 43px !important;
+  height: 43px !important;
+}
+
+.choices__inner_flexheight {
+  padding: 3.5px 3.5px 3.75px !important;
+  min-height: 43px !important;
+  height: auto !important;
+}
+.choices__inner_md {
+  padding: 7.5px 7.5px !important;
+  min-height: 40px !important;
+  height: 40px !important;
+}
+.form-control-textarea {
+  min-height: 80px !important;
+}
+
+.input-group-text,
+.form-control:not(textarea) {
+  height: 43px !important;
+  margin-bottom: 0px;
+}
+
+.input-group-text-sm,
+.form-control-sm {
+  height: 35px !important;
+}
+.quilldiv > .ql-toolbar:first-child {
+  display: none !important;
+}
+.ql-container {
+  height: calc(100% - 42px);
+}
+
+.w-3div{
+  width: calc(100%/3 - 5px) !important;
+}
