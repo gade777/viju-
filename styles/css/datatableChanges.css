@@ -1,0 +1,60 @@
+td {
+  white-space: normal !important;
+  /* white-space: nowrap !important; */
+  word-wrap: break-word !important;
+  padding: 1px 5px !important;
+}
+
+div.dataTables_wrapper {
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  margin-top: 25px !important;
+}
+
+th {
+  white-space: nowrap !important;
+}
+
+.lightgreen {
+  background: #c4fede !important;
+}
+
+.lightred {
+  background: #fec4c4 !important;
+}
+
+.highlightedrow{
+  background: #e3e1fc !important;
+}
+
+.table-bordered td:not(.tableborders),
+.table-bordered th:not(.tableborders) {
+  border-color: #ced4da !important;
+}
+
+/* .table tr:hover:not(.nohovershadow) {
+  background-color: #e8eeff !important;
+  box-shadow: inset 1px 0 0 #f2f4f8, inset -1px 0 0 #f2f4f8,
+    0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%) !important;
+  z-index: 10 !important;
+  border-radius: 2px !important;
+} */
+#dataparent > div > .dataTable-top {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+#dataparent > div > .dataTable-top .dataTable-search {
+  width: 100% !important;
+}
+td {
+  white-space: nowrap !important;
+  /* white-space: inherit !important; */
+  /* white-space: nowrap !important; */
+  /* word-wrap: break-word !important; <- last changed*/
+  /* overflow-wrap: break-word !important; <- last changed */
+  /* line-height: 26px !important; */
+}
