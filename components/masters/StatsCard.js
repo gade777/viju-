@@ -1,13 +1,12 @@
 // components/StatsCard.js
 import { useState } from 'react';
-import Employees from './Employees';
 
 const StatsCard = () => {
   const data = [
-    { name: 'Sub-Admin', id: 12 },
-    { name: 'Employee', id: 13 },
-    { name: 'Teacher', id: 14 },
-    { name: 'Student', id: 12 },
+    { name: 'Sub-Admin', id: 1 },
+    { name: 'Employee', id: 1 },
+    { name: 'Teacher', id: 0 },
+    { name: 'Student', id: 1 },
   ];
 
   const colorClasses = ['bg-danger', 'bg-primary', 'bg-info', 'bg-success'];
@@ -35,8 +34,8 @@ const StatsCard = () => {
               >
                 <div className="card-body">
                   <i className="fa fa-code-fork"></i>
-                  <span className="count-numbers" style={{ fontSize: '2em' }}>
-                    {value.id}
+                  <span className="count-numbers" style={{ fontSize: '3em' }}>
+                    {value.id + '/'}
                   </span>
                   <span className="count-name" style={{ fontSize: '1.5em' }}>
                     {value.name}
@@ -47,7 +46,7 @@ const StatsCard = () => {
           );
         })}
       </div>
-      <Employees isVisible={selectedCategory === 13} />
+      {/* <Employees isVisible={selectedCategory === 13} /> */}
     </div>
   );
 };

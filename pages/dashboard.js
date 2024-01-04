@@ -1,10 +1,11 @@
 import StatsCard from '@/components/masters/StatsCard';
+import Sidebar from '@/components/sidebar';
 import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import Script from 'next/script';
 import { useSnackbar } from 'notistack';
 import { useEffect, useState } from 'react';
 import Header from '../components/header';
-import Sidebar from '../components/sidebar';
+import UserList from '../components/masters/UserList';
 import * as fbc from '../firebase/firebaseConstants';
 import { db } from '../firebase/firebaseconfig';
 import * as utility from '../libraries/utility';
@@ -18,6 +19,13 @@ const Employees = () => {
       variant: variant,
       anchorOrigin: { horizontal: 'right', vertical: 'top' },
     });
+  };
+  const graphData = {
+    Category1: 30,
+    Category2: 20,
+    Category3: 15,
+    Category4: 25,
+    Category5: 10,
   };
   const errorCallback = (err) => {
     utility.hideloading();
@@ -155,36 +163,40 @@ const Employees = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#E6E6FA' }}>
-      <Script
-        onReady={handleReadyScript}
-        onLoad={handleLoadScript}
-        onError={handleLoadErrorScript}
-        src="../../../assets/plugins/datatables/datatables.bundle.js"
-      />
-      <div className="d-flex flex-column flex-root app-root" id="kt_app_root">
-        <div
-          className="app-page flex-column flex-column-fluid"
-          id="kt_app_page"
-        >
-          <Header title={'Dashboard'} />
-
+    <>
+      <div style={{ backgroundColor: '#E6E6FA' }}>
+        <Script
+          onReady={handleReadyScript}
+          onLoad={handleLoadScript}
+          onError={handleLoadErrorScript}
+          src="../../../assets/plugins/datatables/datatables.bundle.js"
+        />
+        <div className="d-flex flex-column flex-root app-root" id="kt_app_root">
           <div
-            className="app-wrapper flex-column flex-row-fluid"
-            id="kt_app_wrapper"
+            className="app-page flex-column flex-column-fluid"
+            id="kt_app_page"
           >
-            <Sidebar />
-
+            <Header title={'Dashboard'} />
             <div
-              className="app-main flex-row flex-row-fluid py-2 px-4 "
-              id="kt_app_main"
+              className="app-wrapper flex-column flex-row-fluid"
+              id="kt_app_wrapper"
             >
-              <StatsCard />
+              <Sidebar />
+              <div
+                className="app-main flex-row flex-row-fluid py-2 px-4 m10"
+                id="kt_app_main"
+              >
+                <StatsCard />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="py-2 px-4 m10">
+        <UserList />
+        {/* <CircularGraph data={graphData} /> */}
+      </div>
+    </>
   );
 };
 

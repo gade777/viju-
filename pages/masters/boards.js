@@ -86,23 +86,26 @@ const Boards = () => {
 
         var rowitem = `<tr>
                         <td class="text-gray-800 mb-1">${index + 1}.</td>
-                        <td class="text-gray-800 mb-1">${boardDoc[fbc.BOARD_NAME]
-          }</td>
-                        <td class="text-gray-800 mb-1">${boardDoc[fbc.BOARD_CODE]
-          }</td>
+                        <td class="text-gray-800 mb-1">${
+                          boardDoc[fbc.BOARD_NAME]
+                        }</td>
+                        <td class="text-gray-800 mb-1">${
+                          boardDoc[fbc.BOARD_CODE]
+                        }</td>
 
                         <td>
-                          ${boardDoc[fbc.BOARD_STATUS] ? active : inactive
-          }
+                          ${boardDoc[fbc.BOARD_STATUS] ? active : inactive}
                         </td>
 
                         <td class="text-end">
-                          <button id="modify_${boardDoc[fbc.BOARD_UID]
-          }" class="btn btn-sm btn-light btn-active-light-primary m-1">
+                          <button id="modify_${
+                            boardDoc[fbc.BOARD_UID]
+                          }" class="btn btn-sm btn-light btn-active-light-primary m-1">
                             MODIFY
                           </button>
-                          <button id="view_${boardDoc[fbc.BOARD_UID]
-          }" class="btn btn-sm btn-light btn-active-light-primary m-1">
+                          <button id="view_${
+                            boardDoc[fbc.BOARD_UID]
+                          }" class="btn btn-sm btn-light btn-active-light-primary m-1">
                             VIEW
                           </button>
                         </td>
@@ -110,10 +113,10 @@ const Boards = () => {
 
         $('#Boardstablebody').append(rowitem);
         $('#modify_' + boardDoc[fbc.BOARD_UID]).on('click', function () {
-          modifyBoard(this.id.replaceAll("modify_", ""));
+          modifyBoard(this.id.replaceAll('modify_', ''));
         });
         $('#view_' + boardDoc[fbc.BOARD_UID]).on('click', function () {
-          viewBoard(this.id.replaceAll("view_", ""));
+          viewBoard(this.id.replaceAll('view_', ''));
         });
       });
 
@@ -143,7 +146,7 @@ const Boards = () => {
     }
   }, [allBoardDocs]);
 
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
   const handleReadyScript = () => {
     console.log('SCRIPT Ready');
     getAllBoards();
@@ -232,7 +235,7 @@ const Boards = () => {
                         className="btn btn-sm fs-5 btn-light-primary"
                         // data-bs-toggle="modal"
                         onClick={(e) => addNewBoard()}
-                      // data-bs-target="#modal_adduser"
+                        // data-bs-target="#modal_adduser"
                       >
                         Add Board
                       </button>
