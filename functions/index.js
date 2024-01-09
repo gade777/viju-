@@ -67,6 +67,34 @@ exports.addorUpdateEmployee = functions.https.onCall(
     }
   }
 );
+// Define the Cloud Function to fetch employee data
+exports.fetchEmployeeData = functions.https.onCall(async (data, context) => {
+  try {
+    const employeeRef = admin.firestore().collection('EmployeeDetails');
+    const snapshot = await employeeRef.get();
+
+    const employeeDataArray = snapshot.docs.map((doc) => {
+      return {
+        employee_uid: doc.id,
+        ...doc.data(),
+      };
+    });
+
+    return {
+      status: true,
+      data: employeeDataArray,
+      message: 'Employee data fetched successfully',
+    };
+  } catch (error) {
+    console.error('Error fetching employee data:', error);
+    return {
+      status: false,
+      data: [],
+      message: 'Error fetching employee data',
+    };
+  }
+});
+
 exports.addorUpdateteacher = functions.https.onCall(
   async (requestData, context) => {
     var batch = db.batch();

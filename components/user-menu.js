@@ -68,7 +68,6 @@ const UserMenu = () => {
             Account Settings
           </a>
         </div>
-
         <div className="menu-item px-5">
           <a onClick={() => utility.signOutUser()} className="menu-link px-5">
             Sign Out

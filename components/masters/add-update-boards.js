@@ -365,7 +365,7 @@ const AddorUpdateBoard = ({ setselectBoard, selectBoard, setBoardModal }) => {
             <button
               onClick={(e) => clearAll()}
               id="modal_addboard_close"
-              className="btn-icon btn btn-sm btn-active-light-primary rounded-circle"
+               className="btn-icon btn btn-sm btn-active-light-primary rounded-circle"
             >
               <span className="ri-close-line fs-1"></span>
             </button>
